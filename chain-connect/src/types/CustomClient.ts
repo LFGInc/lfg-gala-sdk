@@ -18,5 +18,8 @@ export interface CustomClient {
   setWalletAddress: string;
   getChaincodeUrl: string;
   connect: () => Promise<string>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sign: (method: string, dto: any) => Promise<any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  signObject?: (dto: any) => Promise<any>;
 }

@@ -59,7 +59,6 @@ import {
   UserProfileBody
 } from "@gala-chain/api";
 
-import { generateEIP712Types } from "./Utils";
 import { CustomClient } from "./types/CustomClient";
 
 export class GalachainClient implements CustomClient {
@@ -67,6 +66,15 @@ export class GalachainClient implements CustomClient {
 
   async connect(): Promise<string> {
     return this.features.connect();
+  }
+
+  async signObject<U extends ConstructorArgs<ChainCallDTO>>(
+    dto: U
+  ): Promise<U & { signature: string; prefix: string }> {
+    if (!this.features.signObject) {
+      throw new Error("Gala does not support signing objects");
+    }
+    return this.features.signObject(dto);
   }
 
   async sign<U extends ConstructorArgs<ChainCallDTO>>(

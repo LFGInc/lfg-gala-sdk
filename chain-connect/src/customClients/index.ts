@@ -14,3 +14,9 @@
  */
 export * from "./MetamaskConnectClient";
 export * from "./TrustConnectClient";
+
+/**
+ * github: https://github.com/LFGInc/lfg-gala-sdk
+ *
+ */
+export * from "./LfgwConnectClient";

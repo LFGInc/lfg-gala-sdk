@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 import { GalachainClient } from "./GalachainClient";
-import { GalachainConnectTrustClient, MetamaskConnectClient } from "./customClients";
+import { GalachainConnectTrustClient, LfgwConnectClient, MetamaskConnectClient } from "./customClients";
 
 export class ClientFactory {
   public metamaskClient(chaincodeUrl: string): GalachainClient {
@@ -24,5 +24,9 @@ export class ClientFactory {
   public trustClient(chaincodeUrl: string): GalachainClient {
     const instance = new GalachainConnectTrustClient(chaincodeUrl);
     return new GalachainClient(instance);
+  }
+
+  public galachainClient(chaincodeUrl: string): GalachainClient {
+    return new GalachainClient(new LfgwConnectClient(chaincodeUrl));
   }
 }
