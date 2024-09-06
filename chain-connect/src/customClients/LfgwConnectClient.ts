@@ -109,12 +109,12 @@ export class LfgwConnectClient extends CustomEventEmitter<MetaMaskEvents> implem
     }
 
     try {
-      const signature = this.#provider.send(LfgwConnectMethods.SIGN_OBJECT, [
+      const signature = (await this.#provider.send(LfgwConnectMethods.SIGN_OBJECT, [
         this.#address.toLowerCase(),
         JSON.stringify(payload)
-      ]);
+      ])) as string;
 
-      return signature;
+      return { signature };
     } catch (error: unknown) {
       throw new Error((error as Error).message);
     }

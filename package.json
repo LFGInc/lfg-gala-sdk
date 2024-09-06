@@ -77,7 +77,8 @@
     "chain-connect",
     "chain-test",
     "chain-ui",
-    "chaincode"
+    "chaincode",
+    "chain-react"
   ],
   "dependencies": {
     "react": "^18.2.0",

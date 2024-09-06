@@ -68,9 +68,7 @@ export class GalachainClient implements CustomClient {
     return this.features.connect();
   }
 
-  async signObject<U extends ConstructorArgs<ChainCallDTO>>(
-    dto: U
-  ): Promise<U & { signature: string; prefix: string }> {
+  async signObject<U extends ConstructorArgs<ChainCallDTO>>(dto: U): Promise<U & { signature: string }> {
     if (!this.features.signObject) {
       throw new Error("Gala does not support signing objects");
     }

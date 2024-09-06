@@ -1,0 +1,1 @@
+export type IComponent<T = {}> = React.FC<React.PropsWithChildren<T>>;
