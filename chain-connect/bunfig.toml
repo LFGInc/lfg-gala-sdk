@@ -1,3 +1,0 @@
-[install.scopes]
-# registry with token
-"@lfginc" = { token = "$NPM_TOKEN", url = "https://npm.pkg.github.com" }

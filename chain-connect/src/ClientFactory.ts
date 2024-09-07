@@ -26,7 +26,7 @@ export class ClientFactory {
     return new GalachainClient(instance);
   }
 
-  static galachainClient(chaincodeUrl: string): GalachainClient {
+  static lfgwClient(chaincodeUrl: string): GalachainClient {
     return new GalachainClient(new LfgwConnectClient(chaincodeUrl));
   }
 }

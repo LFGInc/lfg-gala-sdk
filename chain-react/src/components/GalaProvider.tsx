@@ -17,7 +17,7 @@ const GalaProvider: IComponent<{ config: IGalaConnectConfigs; children?: React.R
     config
 }) => {
     if (isClientSide() && !galaClient) {
-        galaClient = ClientFactory.galachainClient(config.chainCodeUrl);
+        galaClient = ClientFactory.lfgwClient(config.chainCodeUrl);
     }
 
     return <GalaConnectContext.Provider value={galaClient}>{children}</GalaConnectContext.Provider>;

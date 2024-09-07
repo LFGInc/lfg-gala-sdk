@@ -7,8 +7,7 @@ export const useGalaConnect = () => {
     return useMutation({
         mutationKey: ['galaConnectedAddress'],
         mutationFn: async () => {
-            await client.connect();
-            return client.getGalachainAddress;
+            return client.connect();
         },
         onSuccess: data => {
             queryClient.setQueryData(['galaConnectedAddress'], data);
