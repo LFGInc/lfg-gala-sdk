@@ -1,6 +1,11 @@
 {
-  "name": "@gala-chain/connect",
-  "version": "1.4.2",
+  "name": "@lfginc/gala-connect",
+  "version": "0.0.1",
+  "description": "A custom Gala SDK for LFG, forked from @gala-chain/connect@1.4.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LFGInc/lfg-gala-sdk"
+  },
   "dependencies": {
     "@gala-chain/api": "1.4.2",
     "ethers": "^6.12.1",
@@ -24,8 +29,11 @@
     "madge": "madge --circular --warning lib",
     "lint": "nx run lint",
     "fix": "nx run lint --fix",
-    "prepublishOnly": "npm i && npm run clean && npm run build && npm run lint && npm run madge",
+    "prepublishOnly": "bun i && bun run clean && bun run build && bun run lint && bun run madge",
     "format": "prettier --config ../.prettierrc 'src/**/*.ts' --write",
     "test": "jest"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

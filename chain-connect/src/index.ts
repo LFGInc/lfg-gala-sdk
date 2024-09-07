@@ -15,3 +15,7 @@
 export * from "./customClients";
 export * from "./GalachainClient";
 export * from "./utils/WalletUtils";
+export * from "./ClientFactory";
+export * from "./helpers";
+export * from "./types";
+export * from "./Utils";
