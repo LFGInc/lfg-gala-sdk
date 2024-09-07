@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { TokenClass, TokenClassKey } from "@gala-chain/api";
+import { TokenClass, TokenClassKey } from "@lfginc/gala-api";
 
 import { fetchKnownBurnCount } from "../burns/fetchBurns";
 import { TokenClassNotFoundError } from "../token/TokenError";

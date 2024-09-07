@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainCallDTO, ContractAPI, GalaChainResponse, Inferred } from "@gala-chain/api";
+import { ChainCallDTO, ContractAPI, GalaChainResponse, Inferred } from "@lfginc/gala-api";
 import axios from "axios";
 
 import { ChainClient, ChainClientBuilder, ClassType, ContractConfig, isClassType } from "../generic";

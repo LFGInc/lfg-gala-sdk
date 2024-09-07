@@ -1,0 +1,48 @@
+{
+    "name": "@lfginc/gala-react-kit",
+    "version": "0.0.1",
+    "license": "MIT",
+    "main": "./dist/src/index.js",
+    "types": "./dist/src/index.d.ts",
+    "type": "module",
+    "files": [
+      "dist"
+    ],
+
+    "scripts": {
+        "clean": "tsc -b --clean",
+        "build": "tsc -b",
+        "build:watch": "tsc -b -w",
+        "madge": "madge --circular --warning dist",
+        "lint": "eslint src --ext .ts,.tsx --fix",
+        "prepublishOnly": "bun i && bun run clean && bun run build && bun run lint && bun run madge",
+        "format": "prettier --config ../.prettierrc 'src/**/*.ts' --write",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@typescript-eslint/eslint-plugin": "^5.50.0",
+        "@typescript-eslint/parser": "^5.50.0",
+        "eslint": "^8.33.0",
+        "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-chakra-ui": "^0.7.6",
+        "eslint-plugin-i18next": "^6.0.0-2",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-mobx": "^0.0.9",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-unused-imports": "^2.0.0",
+        "prettier": "^2.6.2"
+    },
+    "dependencies": {
+        "@lfginc/gala-connect": "^0.0.1",
+        "@tanstack/react-query": "^5.55.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    }
+}

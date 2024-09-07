@@ -22,7 +22,7 @@ import {
   TokenInstance,
   TokenInstanceQueryKey,
   TokenMintAllowanceRequest
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 
 import { ensureQuantityCanBeMinted } from "../allowances";

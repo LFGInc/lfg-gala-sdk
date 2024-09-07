@@ -1,7 +1,7 @@
 /*
  * This file is part of the Gala Network Connect project for LFGW.
  */
-import { ChainCallDTO, ConstructorArgs } from "@gala-chain/api";
+import { ChainCallDTO, ConstructorArgs } from "@lfginc/gala-api";
 import { BrowserProvider, getAddress } from "ethers";
 
 import { CustomEventEmitter, MetaMaskEvents } from "../helpers";

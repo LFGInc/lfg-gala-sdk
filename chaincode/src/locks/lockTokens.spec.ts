@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { GalaChainResponse, LockTokenDto, TokenBalance, TokenHold, createValidDTO } from "@gala-chain/api";
-import { currency, fixture, nft, users, writesMap } from "@gala-chain/test";
+import { GalaChainResponse, LockTokenDto, TokenBalance, TokenHold, createValidDTO } from "@lfginc/gala-api";
+import { currency, fixture, nft, users, writesMap } from "@lfginc/gala-test";
 import BigNumber from "bignumber.js";
 import { plainToInstance } from "class-transformer";
 

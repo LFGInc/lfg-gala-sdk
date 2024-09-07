@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainObject, RangedChainObject } from "@gala-chain/api";
+import { ChainObject, RangedChainObject } from "@lfginc/gala-api";
 
 export type WriteRecord =
   | ChainObject

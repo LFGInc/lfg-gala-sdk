@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { GalaChainResponse, TokenClass, UpdateTokenClassDto, createValidDTO } from "@gala-chain/api";
-import { currency, fixture, users, writesMap } from "@gala-chain/test";
+import { GalaChainResponse, TokenClass, UpdateTokenClassDto, createValidDTO } from "@lfginc/gala-api";
+import { currency, fixture, users, writesMap } from "@lfginc/gala-test";
 
 import GalaChainTokenContract from "../__test__/GalaChainTokenContract";
 import { createValidChainObject } from "../types";

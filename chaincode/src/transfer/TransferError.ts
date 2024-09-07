@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { DefaultError, ValidationFailedError } from "@gala-chain/api";
+import { DefaultError, ValidationFailedError } from "@lfginc/gala-api";
 
 export class SameSenderAndRecipientError extends ValidationFailedError {
   constructor(fromPersonKey: string, toPersonKey: string) {

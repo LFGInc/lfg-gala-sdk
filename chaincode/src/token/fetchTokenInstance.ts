@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainObject, TokenInstance, TokenInstanceKey, TokenInstanceKeyProperties } from "@gala-chain/api";
+import { ChainObject, TokenInstance, TokenInstanceKey, TokenInstanceKeyProperties } from "@lfginc/gala-api";
 
 import { GalaChainContext } from "../types";
 import { getObjectByKey } from "../utils/state";

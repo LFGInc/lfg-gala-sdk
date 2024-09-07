@@ -52,7 +52,7 @@ import {
   UseTokenDto,
   generateResponseSchema,
   generateSchema
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { plainToClass } from "class-transformer";
 import { Info } from "fabric-contract-api";
 

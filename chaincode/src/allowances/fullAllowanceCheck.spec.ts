@@ -18,8 +18,8 @@ import {
   GalaChainResponse,
   TokenInstanceKey,
   createValidDTO
-} from "@gala-chain/api";
-import { fixture, nft, users } from "@gala-chain/test";
+} from "@lfginc/gala-api";
+import { fixture, nft, users } from "@lfginc/gala-test";
 import { plainToInstance } from "class-transformer";
 
 import GalaChainTokenContract from "../__test__/GalaChainTokenContract";

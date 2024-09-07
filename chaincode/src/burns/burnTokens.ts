@@ -22,7 +22,7 @@ import {
   TokenClass,
   TokenInstanceKey,
   ValidationFailedError
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 import { checkAllowances, fetchAllowances, useAllowances } from "../allowances";

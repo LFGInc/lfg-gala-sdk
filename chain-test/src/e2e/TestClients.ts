@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { GalaChainResponseType, RegisterEthUserDto, RegisterUserDto, createValidDTO } from "@gala-chain/api";
+import { GalaChainResponseType, RegisterEthUserDto, RegisterUserDto, createValidDTO } from "@lfginc/gala-api";
 import {
   ChainClient,
   ChainUser,
@@ -22,7 +22,7 @@ import {
   PublicKeyContractAPI,
   commonContractAPI,
   publicKeyContractAPI
-} from "@gala-chain/client";
+} from "@lfginc/gala-client";
 import * as fs from "fs";
 import * as path from "path";
 

@@ -25,8 +25,8 @@ import {
   TokenInstanceKey,
   TransferTokenDto,
   createValidDTO
-} from "@gala-chain/api";
-import { ChainClient, ChainUser, ChainUserAPI } from "@gala-chain/client";
+} from "@lfginc/gala-api";
+import { ChainClient, ChainUser, ChainUserAPI } from "@lfginc/gala-client";
 import { expect } from "@jest/globals";
 import BigNumber from "bignumber.js";
 import { instanceToPlain, plainToInstance } from "class-transformer";

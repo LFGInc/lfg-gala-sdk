@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ConflictError } from "@gala-chain/api";
+import { ConflictError } from "@lfginc/gala-api";
 
 export class UniqueTransactionConflictError extends ConflictError {
   constructor(uniqueKey: string, transactionId: string) {

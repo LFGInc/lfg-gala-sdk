@@ -21,7 +21,7 @@ import {
   TokenClassKey,
   TokenInstance,
   TokenInstanceKey
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 
 import users from "./users";

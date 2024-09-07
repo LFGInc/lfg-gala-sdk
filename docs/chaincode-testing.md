@@ -1,11 +1,11 @@
 # Testing your chaincode
 
-The GalaChain SDK includes a comprehensive set of tools in the `@gala-chain/test` package to facilitate the testing of your chaincode.
+The GalaChain SDK includes a comprehensive set of tools in the `@lfginc/gala-test` package to facilitate the testing of your chaincode.
 This package supports both unit testing for individual contracts and integration/end-to-end testing for running networks.
 
 ## Unit testing
 
-The `@gala-chain/test` package offers utilities designed for straightforward unit testing of your chaincode.
+The `@lfginc/gala-test` package offers utilities designed for straightforward unit testing of your chaincode.
 The recommended library for tests is [Jest](https://jestjs.io/).
 
 ### Writing unit tests
@@ -33,7 +33,7 @@ This test ensures that the `AppleContract` allows users to successfully plant a 
 It validates the contract's behavior during the tree planting process.
 
 ```typescript
-import { fixture, transactionSuccess, writesMap } from "@gala-chain/test";
+import { fixture, transactionSuccess, writesMap } from "@lfginc/gala-test";
 import { AppleTree, AppleTreeDto, Variety } from "../apples";
 import { AppleContract } from "./AppleContract";
 
@@ -52,7 +52,7 @@ it("should allow to plant a tree", async () => {
 });
 ```
 
-In this test, we set up the initial environment using the `fixture` utility from `@gala-chain/test`.
+In this test, we set up the initial environment using the `fixture` utility from `@lfginc/gala-test`.
 The `fixture` contains:
 - `contract` -- instance of the `AppleContract` class,
 - `ctx` -- test chaincode context,
@@ -62,9 +62,9 @@ Also, we define the `AppleTreeDto` instance containing details about the apple t
 
 The primary action involves invoking the `PlantTree` method on the `contract` instance.
 
-Then, we assert that the response from planting the tree aligns with the expected success result with `transactionSuccess` matcher from `@gala-chain/test`.
+Then, we assert that the response from planting the tree aligns with the expected success result with `transactionSuccess` matcher from `@lfginc/gala-test`.
 Furthermore, we verify that the changes to the blockchain state (`writes`) match the expected modifications.
-Since `writes` is a map of key-value pairs, we use the `writesMap` utility from `@gala-chain/test` to get a key-value representation of the `expectedTree` instance.
+Since `writes` is a map of key-value pairs, we use the `writesMap` utility from `@lfginc/gala-test` to get a key-value representation of the `expectedTree` instance.
 
 #### Test 2. `AppleContract` should fail to plant a tree if tree already exists
 
@@ -72,8 +72,8 @@ In this test case, we aim to verify the behavior of the AppleContract when attem
 In our case a tree is considered to exist if it has the same `variety` and `index` as is planted by the same user.
 
 ```typescript
-import { fixture, transactionErrorMessageContains } from "@gala-chain/test";
-import { ChainUser } from "@gala-chain/client";
+import { fixture, transactionErrorMessageContains } from "@lfginc/gala-test";
+import { ChainUser } from "@lfginc/gala-client";
 import { AppleTree, AppleTreeDto, Variety } from "../apples";
 import { AppleContract } from "./AppleContract";
 
@@ -94,14 +94,14 @@ it("should fail to plant a tree if tree already exists", async () => {
 });
 ```
 
-In this test case, we also use the `fixture` utility from `@gala-chain/test` to set up the initial environment.
+In this test case, we also use the `fixture` utility from `@lfginc/gala-test` to set up the initial environment.
 However, we use the `callingUser` method to specify the user who will invoke the contract method, and we use the `savedState` method to specify the initial state of the blockchain.
 Also, the saved `AppleTree` instance is marked to be planted by the user who invokes the contract method (`user.identityKey` is the same as `ctx.callingUser` in this setup).
 
 This way calling `PlantTree` method with the same `variety` and `index` will result in an error.
 
 During validation, we assert that the response from planting the tree contains the expected error message, and no changes to the blockchain state (`writes`) are made.
-To assert the error we use the `transactionErrorMessageContains` matcher from `@gala-chain/test`.
+To assert the error we use the `transactionErrorMessageContains` matcher from `@lfginc/gala-test`.
 Other useful matchers include `transactionError` (for providing an exact error object) and `transactionErrorKey` (for providing the error key).
 
 #### Test 3. `AppleContract` should allow to pick an apple
@@ -109,7 +109,7 @@ Other useful matchers include `transactionError` (for providing an exact error o
 In this test case, we aim to verify the behavior of the `AppleContract` when attempting to pick an apple from an existing apple tree.
 
 ```typescript
-import { fixture, transactionSuccess, writesMap } from "@gala-chain/test";
+import { fixture, transactionSuccess, writesMap } from "@lfginc/gala-test";
 import { plainToInstance } from "class-transformer";
 import { AppleTree, PickAppleDto, Variety } from "../apples";
 import { AppleContract } from "./AppleContract";
@@ -142,12 +142,12 @@ During validation, we assert that the response from picking an apple is successf
 ### Using `fixture` for regular functions
 
 `fixture` can be used for regular functions as well, without the need to call contract methods directly.
-However, the `ctx` parameter is tied to the contract, and you must provide any contract class, such as `AppleContract` or any class that extends `GalaContract` from the `@gala-chain/chaincode` package.
+However, the `ctx` parameter is tied to the contract, and you must provide any contract class, such as `AppleContract` or any class that extends `GalaContract` from the `@lfginc/gala-chaincode` package.
 
 ```typescript
-import { ChainUser } from "@gala-chain/client";
-import { fixture, writesMap } from "@gala-chain/test";
-import { GalaContract } from "@gala-chain/chaincode";
+import { ChainUser } from "@lfginc/gala-client";
+import { fixture, writesMap } from "@lfginc/gala-test";
+import { GalaContract } from "@lfginc/gala-chaincode";
 import { AppleTreeDto, AppleTreesDto } from "./dtos";
 import { Variety } from "./types";
 import { AppleTree } from "./AppleTree";
@@ -201,7 +201,7 @@ In the context of testing contract methods with `fixture`, you don't need to man
 
 ## Integration testing
 
-The `@gala-chain/test` package, combined with the `@gala-chain/client` package, provides utilities for integration testing your chaincode.
+The `@lfginc/gala-test` package, combined with the `@lfginc/gala-client` package, provides utilities for integration testing your chaincode.
 The primary objective of integration or end-to-end tests is to call transactions on the actual Hyperledger Fabric network and verify the results.
 
 The recommended library for tests is [Jest](https://jestjs.io/).
@@ -243,9 +243,9 @@ It needs to be connected to the network, anf it needs to be disconnected after t
 Here is an example of the test setup:
 
 ```typescript
-import { AdminChainClients, TestClients, transactionErrorKey, transactionSuccess, } from "@gala-chain/test";
-import { GalaChainResponse } from "@gala-chain/api";
-import { ChainClient, ChainUser } from "@gala-chain/client";
+import { AdminChainClients, TestClients, transactionErrorKey, transactionSuccess, } from "@lfginc/gala-test";
+import { GalaChainResponse } from "@lfginc/gala-api";
+import { ChainClient, ChainUser } from "@lfginc/gala-client";
 import { AppleTreeDto, AppleTreesDto, FetchTreesDto, PagedTreesDto, PickAppleDto, Variety } from "../src/apples";
 
 describe("Apple trees", () => {
@@ -405,5 +405,5 @@ The response contains two trees, planted by the user, and the bookmark for fetch
 In this test case, we try to pick an apple from the tree that was planted in the first test.
 However, the tree is too young, so we expect an error.
 
-These examples provide a comprehensive guide for unit and integration testing of GalaChain smart contracts using the `@gala-chain/test` package.
+These examples provide a comprehensive guide for unit and integration testing of GalaChain smart contracts using the `@lfginc/gala-test` package.
 Adjust and expand the provided code snippets based on your specific contract implementations and testing requirements.

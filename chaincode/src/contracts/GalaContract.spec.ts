@@ -21,8 +21,8 @@ import {
   GalaChainResponseType,
   GetObjectDto,
   createValidDTO
-} from "@gala-chain/api";
-import { transactionError, transactionSuccess } from "@gala-chain/test";
+} from "@lfginc/gala-api";
+import { transactionError, transactionSuccess } from "@lfginc/gala-test";
 import { instanceToPlain } from "class-transformer";
 import { Context } from "fabric-contract-api";
 import { inspect } from "util";

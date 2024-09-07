@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { LockTokenRequestParams, TransferTokenParams, signatures } from "@gala-chain/api";
+import { LockTokenRequestParams, TransferTokenParams, signatures } from "@lfginc/gala-api";
 import { ethers } from "ethers";
 import { EventEmitter } from "events";
 

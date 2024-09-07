@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { TokenAllowance } from "@gala-chain/api";
-import { currency, fixture, users } from "@gala-chain/test";
+import { TokenAllowance } from "@lfginc/gala-api";
+import { currency, fixture, users } from "@lfginc/gala-test";
 import BigNumber from "bignumber.js";
 import { plainToInstance } from "class-transformer";
 

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { NotImplementedError, TokenBalance, TokenInstanceKey } from "@gala-chain/api";
+import { NotImplementedError, TokenBalance, TokenInstanceKey } from "@lfginc/gala-api";
 
 import { fetchOrCreateBalance } from "../balances";
 import { fetchTokenInstance } from "../token";

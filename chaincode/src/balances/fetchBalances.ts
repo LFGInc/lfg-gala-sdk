@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainError, ErrorCode, TokenBalance } from "@gala-chain/api";
+import { ChainError, ErrorCode, TokenBalance } from "@lfginc/gala-api";
 
 import { GalaChainContext } from "../types";
 import { getObjectsByPartialCompositeKey } from "../utils";

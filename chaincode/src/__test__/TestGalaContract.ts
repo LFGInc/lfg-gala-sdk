@@ -14,8 +14,8 @@
  */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { ChainCallDTO, ChainKey, ChainObject, GalaChainResponse } from "@gala-chain/api";
-import { NotImplementedError } from "@gala-chain/api";
+import { ChainCallDTO, ChainKey, ChainObject, GalaChainResponse } from "@lfginc/gala-api";
+import { NotImplementedError } from "@lfginc/gala-api";
 import { Exclude } from "class-transformer";
 import { IsPositive } from "class-validator";
 import { Transaction } from "fabric-contract-api";

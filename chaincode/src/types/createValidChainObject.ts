@@ -16,7 +16,7 @@
 /*
  * Creates valid chain object. Throws error in case of failure
  */
-import { ChainObject, ClassConstructor, NonFunctionProperties, RangedChainObject } from "@gala-chain/api";
+import { ChainObject, ClassConstructor, NonFunctionProperties, RangedChainObject } from "@lfginc/gala-api";
 
 export async function createValidChainObject<T extends ChainObject | RangedChainObject>(
   constructor: ClassConstructor<T>,

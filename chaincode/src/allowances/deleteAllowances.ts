@@ -12,9 +12,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { AllowanceType, TokenAllowance } from "@gala-chain/api";
-import { ChainObject } from "@gala-chain/api";
-import { ForbiddenError } from "@gala-chain/api";
+import { AllowanceType, TokenAllowance } from "@lfginc/gala-api";
+import { ChainObject } from "@lfginc/gala-api";
+import { ForbiddenError } from "@lfginc/gala-api";
 
 import { GalaChainContext } from "../types";
 import { deleteChainObject, getObjectByKey } from "../utils";

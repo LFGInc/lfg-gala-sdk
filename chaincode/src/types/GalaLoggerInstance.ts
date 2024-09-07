@@ -15,7 +15,7 @@
 import tracer from "dd-trace";
 import formats from "dd-trace/ext/formats";
 
-import { IContextDetails, ILoggerCommons, IProcessDetails, ITimeLogData } from "@gala-chain/api";
+import { IContextDetails, ILoggerCommons, IProcessDetails, ITimeLogData } from "@lfginc/gala-api";
 import { Context } from "fabric-contract-api";
 import { nanoid } from "nanoid";
 import os from "os";

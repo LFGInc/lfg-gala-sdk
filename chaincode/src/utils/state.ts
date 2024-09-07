@@ -21,7 +21,7 @@ import {
   NotFoundError,
   RangedChainObject,
   ValidationFailedError
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { QueryResponseMetadata } from "fabric-shim";
 
 import { GalaChainContext } from "../types";

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainError, GalaChainResponseType } from "@gala-chain/api";
+import { ChainError, GalaChainResponseType } from "@lfginc/gala-api";
 import { expect } from "@jest/globals";
 
 export function transactionSuccess<T>(payload?: T): unknown {

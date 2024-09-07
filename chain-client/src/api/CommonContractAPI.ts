@@ -21,7 +21,7 @@ import {
   GetObjectDto,
   GetObjectHistoryDto,
   createValidDTO
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 
 import { ChainClient } from "../generic";
 

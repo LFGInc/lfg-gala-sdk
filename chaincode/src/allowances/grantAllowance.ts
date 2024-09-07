@@ -25,7 +25,7 @@ import {
   TokenMintAllowance,
   TokenMintAllowanceRequest,
   TokenMintStatus
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 import { classToPlain as instanceToPlain, plainToInstance } from "class-transformer";
 

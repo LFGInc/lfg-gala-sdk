@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { createValidDTO } from "@gala-chain/api";
-import { transactionError, transactionSuccess } from "@gala-chain/test";
+import { createValidDTO } from "@lfginc/gala-api";
+import { transactionError, transactionSuccess } from "@lfginc/gala-test";
 
 import TestChaincode from "../__test__/TestChaincode";
 import TestGalaContract, { SuperheroDto } from "../__test__/TestGalaContract";

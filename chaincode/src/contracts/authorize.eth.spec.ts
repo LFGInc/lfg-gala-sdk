@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainCallDTO, RegisterUserDto, createValidDTO, signatures } from "@gala-chain/api";
-import { transactionSuccess } from "@gala-chain/test";
+import { ChainCallDTO, RegisterUserDto, createValidDTO, signatures } from "@lfginc/gala-api";
+import { transactionSuccess } from "@lfginc/gala-test";
 import { instanceToInstance, instanceToPlain, plainToClass } from "class-transformer";
 import { randomUUID } from "crypto";
 

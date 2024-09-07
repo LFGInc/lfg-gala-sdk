@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainCallDTO, SigningScheme, signatures } from "@gala-chain/api";
-import { transactionSuccess } from "@gala-chain/test";
+import { ChainCallDTO, SigningScheme, signatures } from "@lfginc/gala-api";
+import { transactionSuccess } from "@lfginc/gala-test";
 import { instanceToPlain, plainToClass } from "class-transformer";
 
 import TestChaincode from "../__test__/TestChaincode";

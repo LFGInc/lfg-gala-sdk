@@ -18,8 +18,8 @@ import {
   FetchTokenClassesWithPaginationDto,
   GalaChainResponse,
   createValidDTO
-} from "@gala-chain/api";
-import { currency, fixture, nft } from "@gala-chain/test";
+} from "@lfginc/gala-api";
+import { currency, fixture, nft } from "@lfginc/gala-test";
 import { plainToInstance } from "class-transformer";
 
 import GalaChainTokenContract from "../__test__/GalaChainTokenContract";

@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ClassConstructor, NotImplementedError } from "@gala-chain/api";
-import { ChaincodeStubClassType, TestChaincodeStub } from "@gala-chain/test";
+import { ClassConstructor, NotImplementedError } from "@lfginc/gala-api";
+import { ChaincodeStubClassType, TestChaincodeStub } from "@lfginc/gala-test";
 import { Context, Contract } from "fabric-contract-api";
 
 import { GalaJSONSerializer } from "../utils";

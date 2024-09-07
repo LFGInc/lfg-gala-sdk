@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainError, ChainObject, GalaChainResponse } from "@gala-chain/api";
+import { ChainError, ChainObject, GalaChainResponse } from "@lfginc/gala-api";
 import {
   MintRequestDto,
   TokenAllowance,
@@ -20,8 +20,8 @@ import {
   TokenInstance,
   TokenMintAllowance,
   TokenMintAllowanceRequest
-} from "@gala-chain/api";
-import { FulfillMintAllowanceDto } from "@gala-chain/api";
+} from "@lfginc/gala-api";
+import { FulfillMintAllowanceDto } from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 import { inspect } from "util";
 

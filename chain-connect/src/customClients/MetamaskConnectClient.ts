@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainCallDTO, ConstructorArgs, signatures } from "@gala-chain/api";
+import { ChainCallDTO, ConstructorArgs, signatures } from "@lfginc/gala-api";
 import { BrowserProvider, getAddress } from "ethers";
 
 import { generateEIP712Types } from "../Utils";

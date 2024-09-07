@@ -1,0 +1,38 @@
+{
+    "name": "chain-react",
+    "$schema": "../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "chain-react/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "chain-react/dist",
+                "main": "chain-react/src/index.ts",
+                "tsConfig": "chain-react/tsconfig.json",
+                "assets": ["chain-react/*.md"]
+            }
+        },
+        "publish": {
+            "command": "node tools/scripts/publish.mjs connect {args.ver} {args.tag}",
+            "dependsOn": ["build"]
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "chain-react/**/*.ts",
+                    "chain-react/**/*.tsx",
+                    "chain-react/package.json"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
+        }
+    },
+    "tags": []
+}

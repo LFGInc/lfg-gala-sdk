@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { FetchBurnsDto, GalaChainResponse, TokenBurn, createValidDTO } from "@gala-chain/api";
-import { fixture, nft, users } from "@gala-chain/test";
+import { FetchBurnsDto, GalaChainResponse, TokenBurn, createValidDTO } from "@lfginc/gala-api";
+import { fixture, nft, users } from "@lfginc/gala-test";
 import { plainToInstance } from "class-transformer";
 
 import GalaChainTokenContract from "../__test__/GalaChainTokenContract";

@@ -8,7 +8,7 @@ RUN apk add --update nodejs npm bash jq perl
 RUN wget https://github.com/mikefarah/yq/releases/download/v4.9.8/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq
 
 # Install Gala Chain CLI globally
-RUN npm install -g @gala-chain/cli
+RUN npm install -g @lfginc/gala-cli
 
 # Install Nodemon globally
 RUN npm install -g nodemon

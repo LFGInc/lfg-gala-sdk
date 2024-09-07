@@ -62,13 +62,13 @@ replace_in_pwd_package_json() {
 }
 
 # note: the order of packages is important
-replace_in_pwd_package_json "$script_dir/chain-api" "@gala-chain/api"
-replace_in_pwd_package_json "$script_dir/chain-client" "@gala-chain/client"
-replace_in_pwd_package_json "$script_dir/chain-test" "@gala-chain/test"
-replace_in_pwd_package_json "$script_dir/chaincode" "@gala-chain/chaincode"
-replace_in_pwd_package_json "$script_dir/chain-cli" "@gala-chain/cli"
-replace_in_pwd_package_json "$script_dir/chain-ui/packages/galachain-ui" "@gala-chain/ui"
-replace_in_pwd_package_json "$script_dir/chain-ui/packages/galachain-ui-vue" "@gala-chain/ui-vue"
+replace_in_pwd_package_json "$script_dir/chain-api" "@lfginc/gala-api"
+replace_in_pwd_package_json "$script_dir/chain-client" "@lfginc/gala-client"
+replace_in_pwd_package_json "$script_dir/chain-test" "@lfginc/gala-test"
+replace_in_pwd_package_json "$script_dir/chaincode" "@lfginc/gala-chaincode"
+replace_in_pwd_package_json "$script_dir/chain-cli" "@lfginc/gala-cli"
+replace_in_pwd_package_json "$script_dir/chain-ui/packages/galachain-ui" "@lfginc/gala-uikit"
+replace_in_pwd_package_json "$script_dir/chain-ui/packages/galachain-ui-vue" "@lfginc/gala-uikit-vue"
 
 # we need to install it at the end, because they are cross-dependent
 npm i --no-cache "${to_install[@]}"

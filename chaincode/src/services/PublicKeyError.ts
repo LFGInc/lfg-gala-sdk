@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ConflictError, NotFoundError, UnauthorizedError } from "@gala-chain/api";
+import { ConflictError, NotFoundError, UnauthorizedError } from "@lfginc/gala-api";
 
 export class PkExistsError extends ConflictError {
   constructor(user: string) {

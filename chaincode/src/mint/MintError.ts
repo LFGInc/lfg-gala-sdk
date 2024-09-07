@@ -18,7 +18,7 @@ import {
   MintTokenDto,
   TokenInstanceKey,
   ValidationFailedError
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 import { InsufficientAllowanceError } from "../allowances/AllowanceError";

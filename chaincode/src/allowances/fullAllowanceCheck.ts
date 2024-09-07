@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { AllowanceType, FullAllowanceCheckResDto, TokenAllowance, TokenInstanceKey } from "@gala-chain/api";
-import { TokenBalance } from "@gala-chain/api";
+import { AllowanceType, FullAllowanceCheckResDto, TokenAllowance, TokenInstanceKey } from "@lfginc/gala-api";
+import { TokenBalance } from "@lfginc/gala-api";
 
 import { GalaChainContext } from "../types";
 import { getObjectsByPartialCompositeKey, takeUntilUndefined } from "../utils";

@@ -17,7 +17,7 @@ You need to have the following tools installed on your machine:
 ### 1. Install our CLI
 
 ```
-npm i -g @gala-chain/cli
+npm i -g @lfginc/gala-cli
 ```
 
 Check the CLI:
@@ -139,7 +139,7 @@ Navigate to [http://localhost:3010/graphiql](http://localhost:3010/graphiql) to 
 ### 1. Install our CLI
 
 ```
-npm i -g @gala-chain/cli
+npm i -g @lfginc/gala-cli
 ```
 
 Check the CLI:

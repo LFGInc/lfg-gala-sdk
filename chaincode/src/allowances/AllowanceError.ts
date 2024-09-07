@@ -21,7 +21,7 @@ import {
   TokenAllowance,
   TokenInstanceKey,
   ValidationFailedError
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 export class BalanceNotFoundError extends NotFoundError {

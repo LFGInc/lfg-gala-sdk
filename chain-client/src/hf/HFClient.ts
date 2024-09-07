@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainCallDTO, GalaChainResponse, Inferred } from "@gala-chain/api";
+import { ChainCallDTO, GalaChainResponse, Inferred } from "@lfginc/gala-api";
 import { Contract, Gateway, Network } from "fabric-network";
 
 import { ChainClient, ClassType, ContractConfig, isClassType } from "../generic";

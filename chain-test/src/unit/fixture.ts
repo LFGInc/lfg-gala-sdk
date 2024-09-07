@@ -20,8 +20,8 @@ import {
   PublicKey,
   RangedChainObject,
   UserProfile
-} from "@gala-chain/api";
-import { ChainUser } from "@gala-chain/client";
+} from "@lfginc/gala-api";
+import { ChainUser } from "@lfginc/gala-client";
 import { plainToInstance } from "class-transformer";
 import { ec as EC } from "elliptic";
 import { Context, Contract } from "fabric-contract-api";

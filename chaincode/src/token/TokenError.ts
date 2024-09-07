@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ConflictError, ForbiddenError, NotFoundError, ValidationFailedError } from "@gala-chain/api";
-import { AllowanceType } from "@gala-chain/api";
+import { ConflictError, ForbiddenError, NotFoundError, ValidationFailedError } from "@lfginc/gala-api";
+import { AllowanceType } from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 export class NftDecimalError extends ValidationFailedError {

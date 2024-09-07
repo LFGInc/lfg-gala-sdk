@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { TokenClass, TokenClassKey, TokenInstance } from "@gala-chain/api";
+import { TokenClass, TokenClassKey, TokenInstance } from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 
 import { GalaChainContext, createValidChainObject } from "../types";

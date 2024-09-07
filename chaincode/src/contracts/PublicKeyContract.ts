@@ -27,7 +27,7 @@ import {
   UserProfile,
   ValidationFailedError,
   signatures
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { Info } from "fabric-contract-api";
 
 import { PublicKeyService } from "../services";

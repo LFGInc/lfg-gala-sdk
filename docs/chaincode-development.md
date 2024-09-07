@@ -21,13 +21,13 @@ You can find the template in our source code in `chain-cli/chaincode-template` d
 
 The GalaChain SDK allows developers to write chaincodes in an object-oriented way.
 It reuses the concept of contract classes and contract methods from the [Hyperledger Fabric Contract API](https://hyperledger.github.io/fabric-chaincode-node/release-2.2/api/).
-Typically, a contract class is a TypeScript class that extends the `GalaContract` class from the `@gala-chain/chaincode` library.
+Typically, a contract class is a TypeScript class that extends the `GalaContract` class from the `@lfginc/gala-chaincode` library.
 It is recommended to treat each contract class as a controller in the MVC pattern (Model, View, Controller) and minimize the logic within it.
 
 Sample contract class:
 
 ```typescript
-import { Evaluate, GalaChainContext, GalaContract, Submit } from "@gala-chain/chaincode";
+import { Evaluate, GalaChainContext, GalaContract, Submit } from "@lfginc/gala-chaincode";
 import { version } from "../../package.json";
 import { AppleTreeDto, FetchTreesDto, PagedTreesDto, fetchTrees, plantTree } from "../apples";
 
@@ -93,7 +93,7 @@ GalaChain defines three decorator types: `@Submit`, `@Evaluate`, and `@GalaTrans
   It is recommended to use `@Submit` and `@Evaluate` decorators instead.
 
 All decorators support the following parameters:
-- `in` - input DTO class that extends `GalaChainDto` class from `@gala-chain/chaincode` library (default: `ChainCallDTO` class).
+- `in` - input DTO class that extends `GalaChainDto` class from `@lfginc/gala-chaincode` library (default: `ChainCallDTO` class).
   This parameter is used to properly deserialize and validate the input parameters of the transaction, and to properly expose the contract method API in GalaChain.
   It is highly recommended to provide a custom dto class as a parameter, otherwise the validation won't work at all: There will be issues with deserialization of non-standard input parameters like nested classes, `BigDecimal` values etc.
 - `out` - output type of the chaincode method (default: `"null"`).
@@ -199,7 +199,7 @@ Thus, the check is not related with user profile saved on chain, but related wit
 })
 ```
 
-Additionally, if you don't want to hardcode the organization names in the contract code, you can use `AUTHORITY_ORG_NAME` const from `@gala-chain/chaincode` library.
+Additionally, if you don't want to hardcode the organization names in the contract code, you can use `AUTHORITY_ORG_NAME` const from `@lfginc/gala-chaincode` library.
 It takes the organization name from `AUTHORITY_ORG_NAME` environment variable (which defaults to `CuratorOrg`).
 
 
@@ -208,7 +208,7 @@ It takes the organization name from `AUTHORITY_ORG_NAME` environment variable (w
 We consider DTO as an object that contains all parameters of the transaction (transaction input parameters).
 It is passed as a second parameter to the contract method and deserialized with the use of transaction decorator `in` parameter.
 
-Each DTO class should extend `ChainCallDTO` class from `@gala-chain/chaincode` library.
+Each DTO class should extend `ChainCallDTO` class from `@lfginc/gala-chaincode` library.
 It defines some additional fields that are required for GalaChain to properly handle the transaction:
 - `signature` - optional signature of the transaction.
   It is required for authorization (see [Authentication and authorization](#authentication-and-authorization)).
@@ -221,7 +221,7 @@ It defines some additional fields that are required for GalaChain to properly ha
 Sample DTO class:
 
 ```typescript
-import { ChainCallDTO, StringEnumProperty } from "@gala-chain/api";
+import { ChainCallDTO, StringEnumProperty } from "@lfginc/gala-api";
 import { Type } from "class-transformer";
 import { ArrayNotEmpty, ValidateNested } from "class-validator";
 
@@ -259,7 +259,7 @@ GalaChain uses the same validation and serialization libraries for objects saved
 Accordingly, you can use the same decorators for objects saved on chain as for DTOs.
 
 ```typescript
-import { BigNumberProperty, ChainKey, ChainObjectBase, StringEnumProperty } from "@gala-chain/api";
+import { BigNumberProperty, ChainKey, ChainObjectBase, StringEnumProperty } from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 import { IsString } from "class-validator";
 import { Variety } from "./types";
@@ -291,7 +291,7 @@ For instance in the sample above, the key of the object saved on chain consists 
 Since it is build from multiple properties, it is called a composite key.
 
 Consider you have `appleTree` which is an instance of `AppleTree` class, and you want to save it on chain.
-You can use `putChainObject` method from `@gala-chain/chaincode` library:
+You can use `putChainObject` method from `@lfginc/gala-chaincode` library:
 
 ```typescript
 await putChainObject(ctx, appleTree);

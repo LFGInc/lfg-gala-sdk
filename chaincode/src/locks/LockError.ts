@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { DefaultError, ForbiddenError, NotFoundError, ValidationFailedError } from "@gala-chain/api";
+import { DefaultError, ForbiddenError, NotFoundError, ValidationFailedError } from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 export class UnlockForbiddenUserError extends ForbiddenError {

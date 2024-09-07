@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainCallDTO, ConstructorArgs, serialize } from "@gala-chain/api";
+import { ChainCallDTO, ConstructorArgs, serialize } from "@lfginc/gala-api";
 import {
   BatchMintTokenParams,
   BurnTokensParams,
@@ -57,7 +57,7 @@ import {
   UpdateTokenClassParams,
   UseTokenParams,
   UserProfileBody
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 
 import { CustomClient } from "./types/CustomClient";
 

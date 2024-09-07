@@ -24,8 +24,8 @@ import {
   TokenInstance,
   TokenInstanceKey,
   TokenMintFulfillment
-} from "@gala-chain/api";
-import { ChainCallDTO, ChainObject } from "@gala-chain/api";
+} from "@lfginc/gala-api";
+import { ChainCallDTO, ChainObject } from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 import { checkAllowances, ensureQuantityCanBeMinted, fetchAllowances, useAllowances } from "../allowances";

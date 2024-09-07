@@ -24,7 +24,7 @@ import {
   UserProfile,
   normalizePublicKey,
   signatures
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { Context } from "fabric-contract-api";
 
 import { GalaChainContext } from "../types";

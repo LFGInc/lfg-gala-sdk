@@ -23,7 +23,7 @@ import {
   TokenClassKeyProperties,
   TokenMintRequest,
   TokenMintStatus
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 import { plainToInstance } from "class-transformer";
 

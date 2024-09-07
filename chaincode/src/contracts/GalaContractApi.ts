@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { MethodAPI, RuntimeError } from "@gala-chain/api";
+import { MethodAPI, RuntimeError } from "@lfginc/gala-api";
 
 // singleton object containing the API
 const api: Record<string, MethodAPI[]> = {};

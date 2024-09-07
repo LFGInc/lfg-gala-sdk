@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { AllowanceType, TokenAllowance, TokenInstance, TokenInstanceKey } from "@gala-chain/api";
+import { AllowanceType, TokenAllowance, TokenInstance, TokenInstanceKey } from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 import { GalaChainContext } from "../types";

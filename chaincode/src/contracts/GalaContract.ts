@@ -23,7 +23,7 @@ import {
   ValidationFailedError,
   createValidDTO,
   signatures
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { Contract } from "fabric-contract-api";
 
 import { PublicKeyService } from "../services";

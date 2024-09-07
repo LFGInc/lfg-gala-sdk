@@ -21,7 +21,7 @@ import {
   RegisterUserDto,
   UpdatePublicKeyDto,
   UserProfile
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 
 import { ChainClient } from "../generic";
 import { CommonContractAPI, commonContractAPI } from "./CommonContractAPI";

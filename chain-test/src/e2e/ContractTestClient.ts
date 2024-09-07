@@ -24,7 +24,7 @@ import {
   buildChainUserAPI,
   commonContractAPI,
   gcclient
-} from "@gala-chain/client";
+} from "@lfginc/gala-client";
 import { jest } from "@jest/globals";
 import * as path from "path";
 

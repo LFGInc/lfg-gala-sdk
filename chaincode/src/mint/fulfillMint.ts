@@ -22,9 +22,9 @@ import {
   TokenInstanceKey,
   TokenMintFulfillment,
   TokenMintRequest
-} from "@gala-chain/api";
-import { ChainCallDTO, ChainError, ChainObject, GalaChainResponse, RuntimeError } from "@gala-chain/api";
-import { FulfillMintDto, MintTokenDto } from "@gala-chain/api";
+} from "@lfginc/gala-api";
+import { ChainCallDTO, ChainError, ChainObject, GalaChainResponse, RuntimeError } from "@lfginc/gala-api";
+import { FulfillMintDto, MintTokenDto } from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 import { plainToInstance } from "class-transformer";
 import { inspect } from "util";

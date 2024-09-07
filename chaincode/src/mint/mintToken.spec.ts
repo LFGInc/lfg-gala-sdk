@@ -26,8 +26,8 @@ import {
   TokenMintRequest,
   TokenMintStatus,
   createValidDTO
-} from "@gala-chain/api";
-import { currency, fixture, nft, users, writesMap } from "@gala-chain/test";
+} from "@lfginc/gala-api";
+import { currency, fixture, nft, users, writesMap } from "@lfginc/gala-test";
 import BigNumber from "bignumber.js";
 import { plainToInstance } from "class-transformer";
 

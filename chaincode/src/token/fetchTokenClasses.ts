@@ -18,7 +18,7 @@ import {
   TokenClass,
   TokenClassKey,
   TokenInstanceKey
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { plainToInstance } from "class-transformer";
 
 import { GalaChainContext } from "../types";

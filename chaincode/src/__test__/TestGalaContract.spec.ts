@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { transactionSuccess } from "@gala-chain/test";
+import { transactionSuccess } from "@lfginc/gala-test";
 
 import TestChaincode from "./TestChaincode";
 import TestGalaContract from "./TestGalaContract";

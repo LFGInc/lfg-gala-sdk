@@ -1,6 +1,6 @@
 {
-  "name": "@gala-chain/api",
-  "version": "1.4.2",
+  "name": "@lfginc/gala-api",
+  "version": "0.0.1",
   "description": "Common types, DTOs (Data Transfer Objects), APIs, signatures, and utils for GalaChain.",
   "license": "Apache-2.0",
   "dependencies": {
@@ -45,7 +45,9 @@
     "madge": "madge --circular --warning lib",
     "lint": "nx run lint",
     "fix": "nx run lint --fix",
-    "prepublishOnly": "npm i && npm run clean && npm run build && npm run lint && npm run madge",
+    "login": "npm login --scope=@NAMESPACE --auth-type=legacy --registry=https://npm.pkg.github.com",
+    "prepublish": "npm run licenses",
+    "prepublishOnly": "bun run login && bun i && bun run clean && bun run build && bun run lint && bun run madge",
     "format": "prettier --config ../.prettierrc 'src/**/*.ts' --write",
     "test": "jest"
   },
@@ -68,5 +70,8 @@
     "branches": 100,
     "functions": 100,
     "lines": 100
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

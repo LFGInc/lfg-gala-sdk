@@ -35,13 +35,13 @@ The address will be used to get public key of a registered user and use it for s
 
 ### Signing the transaction payload
 
-Client side it is recommended to use `@gala-chain/api`, or `@gala-chain/cli`, or `@gala-chain/connect` library to sign the transactions.
+Client side it is recommended to use `@lfginc/gala-api`, or `@lfginc/gala-cli`, or `@lfginc/gala-connect` library to sign the transactions.
 These libraries will automatically sign the transaction in a way it is compatible with GalaChain.
 
-#### Using `@gala-chain/api`:
+#### Using `@lfginc/gala-api`:
 
 ```typescript
-import { createValidDto } from '@gala-chain/api';
+import { createValidDto } from '@lfginc/gala-api';
 import { ChainCallDTO } from "./dtos";
 import { signatures } from "./index";
 
@@ -74,18 +74,18 @@ const dto3 = {myField: "myValue", signing: "TON"};
 dto3.signature = signatures.getSignature(dto3, Buffer.from(userPrivateKey));
 ```
 
-#### Using `@gala-chain/cli`:
+#### Using `@lfginc/gala-cli`:
 
 ```bash
 galachain dto:sign -o=./output/path.json ./priv-key-file '{ "myField": "myValue" }'
 ```
 
-#### Using `@gala-chain/connect`:
+#### Using `@lfginc/gala-connect`:
 
-For the `@gala-chain/connect` library, signing is done automatically when you call the `sendTransaction` method, and it is handled by MetaMask wallet provider.
+For the `@lfginc/gala-connect` library, signing is done automatically when you call the `sendTransaction` method, and it is handled by MetaMask wallet provider.
 
 ```typescript
-import { GalachainConnectClient } from "@gala-chain/connect";
+import { GalachainConnectClient } from "@lfginc/gala-connect";
 
 const client = new GalaChainConnectClient(contractUrl);
 await client.connectToMetaMask();

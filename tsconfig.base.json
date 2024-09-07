@@ -22,13 +22,13 @@
     "noPropertyAccessFromIndexSignature": false,
     "strictPropertyInitialization": false,
     "paths": {
-      "@gala-chain/api": ["chain-api/src/index.ts"],
-      "@gala-chain/chaincode": ["chaincode/src/index.ts"],
-      "@gala-chain/cli": ["chain-cli/src/index.ts"],
-      "@gala-chain/client": ["chain-client/src/index.ts"],
-      "@gala-chain/connect": ["chain-connect/src/index.ts"],
-      "@gala-chain/test": ["chain-test/src/index.ts"],
-      "@gala-chain/ui": ["chain-ui/src/index.ts"]
+      "@lfginc/gala-api": ["chain-api/src/index.ts"],
+      "@lfginc/gala-chaincode": ["chaincode/src/index.ts"],
+      "@lfginc/gala-cli": ["chain-cli/src/index.ts"],
+      "@lfginc/gala-client": ["chain-client/src/index.ts"],
+      "@lfginc/gala-connect": ["chain-connect/src/index.ts"],
+      "@lfginc/gala-test": ["chain-test/src/index.ts"],
+      "@lfginc/gala-uikit": ["chain-ui/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"],
@@ -40,6 +40,8 @@
     "chain-test/**/*.ts",
     "chain-connect/**/*.ts",
     "chain-ui/**/*.ts",
+    "chain-react/**/*.ts",
+    "chain-react/**/*.tsx",
     "package.json",
     "chain-client/src/ops-api-config-schema.json"
   ]

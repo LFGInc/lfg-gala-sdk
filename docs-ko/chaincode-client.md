@@ -1,6 +1,6 @@
 # Chaincode Client
 
-The `@gala-chain/client` package provides a client for interacting with the chaincode.
+The `@lfginc/gala-client` package provides a client for interacting with the chaincode.
 Currently, it supports the following client types:
 * client for interacting directly with the Hyperledger Fabric network, built on top of the [`fabric-network`](https://www.npmjs.com/package/fabric-network) and [`fabric-ca-client`](https://www.npmjs.com/package/fabric-ca-client) packages;
 * client for interacting with the chaincode via REST API that meets the GalaChain REST API specification, used internally at GalaGames,
@@ -8,7 +8,7 @@ Currently, it supports the following client types:
 
 All client types share the same API, so it is easy to switch between them, depending on your needs.
 
-Also, `@gala-chain/client` package is designed to be lightweight.
+Also, `@lfginc/gala-client` package is designed to be lightweight.
 This is why `fabric-network` and `fabric-ca-client` dependencies are marked as optional `peerDependencies` and should be installed separately.
 
 ## Hyperledger Fabric Client
@@ -163,7 +163,7 @@ const client: ChainClient = builder.forContract(...);
 
 ## Extending the client API
 
-The `@gala-chain/client` package provides a default API definition that is used to make the client type-safe.
+The `@lfginc/gala-client` package provides a default API definition that is used to make the client type-safe.
 By default `ChainClient` defines `evaluateTransaction` and `submitTransaction` methods that are used to interact with the chaincode.
 However, you can provide your own API definition, if you want to extend the client API or use a different API.
 The API definition is a function that accepts a `ChainClient` instance and returns an object with methods that will be added to the client.

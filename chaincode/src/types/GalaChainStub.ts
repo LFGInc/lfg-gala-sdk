@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { NotImplementedError } from "@gala-chain/api";
+import { NotImplementedError } from "@lfginc/gala-api";
 import { ChaincodeStub } from "fabric-shim";
 
 import { CachedKV, FabricIterable, fabricIterable, filter, prepend } from "./FabricIterable";

@@ -25,7 +25,7 @@ import {
   generateResponseSchema,
   generateSchema,
   parseValidDTO
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { Object as DTOObject, Transaction } from "fabric-contract-api";
 import { inspect } from "util";
 

@@ -24,8 +24,8 @@ import {
   UpdatePublicKeyDto,
   createValidDTO,
   signatures
-} from "@gala-chain/api";
-import { transactionErrorMessageContains, transactionSuccess } from "@gala-chain/test";
+} from "@lfginc/gala-api";
+import { transactionErrorMessageContains, transactionSuccess } from "@lfginc/gala-test";
 
 import TestChaincode from "../__test__/TestChaincode";
 import { PublicKeyService } from "../services";

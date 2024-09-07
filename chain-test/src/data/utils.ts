@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ClassConstructor, NonFunctionProperties } from "@gala-chain/api";
+import { ClassConstructor, NonFunctionProperties } from "@lfginc/gala-api";
 import { plainToInstance } from "class-transformer";
 
 type CreateInstanceFn<T> = (override?: (plain: NonFunctionProperties<T>) => NonFunctionProperties<T>) => T;

@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainKey, ChainObject } from "@gala-chain/api";
+import { ChainKey, ChainObject } from "@lfginc/gala-api";
 import { Exclude } from "class-transformer";
 import { IsNotEmpty, IsString } from "class-validator";
 import { JSONSchema } from "class-validator-jsonschema";

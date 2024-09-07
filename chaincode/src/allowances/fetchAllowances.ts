@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { AllowanceType, FetchAllowancesResponse, TokenAllowance } from "@gala-chain/api";
+import { AllowanceType, FetchAllowancesResponse, TokenAllowance } from "@lfginc/gala-api";
 
 import { GalaChainContext } from "../types";
 import { getObjectsByPartialCompositeKey, getObjectsByPartialCompositeKeyWithPagination } from "../utils";

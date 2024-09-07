@@ -45,3 +45,4 @@ storybook-static
 Thumbs.db
 .npmrc
 /.nx
+.env

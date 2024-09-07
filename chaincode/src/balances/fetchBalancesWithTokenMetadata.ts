@@ -21,7 +21,7 @@ import {
   TokenBalanceWithMetadata,
   TokenClass,
   createValidDTO
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 
 import { GalaChainContext } from "../types";
 import { getObjectByKey, getObjectsByPartialCompositeKeyWithPagination, takeUntilUndefined } from "../utils";

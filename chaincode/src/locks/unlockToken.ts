@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { TokenBalance, TokenInstanceKey, ValidationFailedError } from "@gala-chain/api";
+import { TokenBalance, TokenInstanceKey, ValidationFailedError } from "@lfginc/gala-api";
 import BigNumber from "bignumber.js";
 
 import { fetchOrCreateBalance } from "../balances";

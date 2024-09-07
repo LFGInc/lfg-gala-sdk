@@ -18,7 +18,7 @@ import {
   TokenClassKey,
   TokenInstanceKey,
   TokenInstanceQueryKey
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 import { plainToInstance } from "class-transformer";
 

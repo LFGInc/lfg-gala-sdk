@@ -19,7 +19,7 @@ import {
   TokenBalance,
   TokenHold,
   TokenInstanceKey
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 import { BigNumber } from "bignumber.js";
 
 import { verifyAndUseAllowances } from "../allowances";

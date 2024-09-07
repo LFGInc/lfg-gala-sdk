@@ -20,7 +20,7 @@ import {
   UserProfile,
   ValidationFailedError,
   signatures
-} from "@gala-chain/api";
+} from "@lfginc/gala-api";
 
 import { PkInvalidSignatureError, PublicKeyService } from "../services";
 import { PkMissingError } from "../services/PublicKeyError";

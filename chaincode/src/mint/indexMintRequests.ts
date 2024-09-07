@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { MintRequestDto } from "@gala-chain/api";
+import { MintRequestDto } from "@lfginc/gala-api";
 
 export function indexMintRequests(requests: MintRequestDto[]): Record<string, MintRequestDto[]> {
   const hash = {};

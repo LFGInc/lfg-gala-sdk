@@ -24,8 +24,8 @@ import {
   UserProfile,
   createValidDTO,
   signatures
-} from "@gala-chain/api";
-import { transactionSuccess } from "@gala-chain/test";
+} from "@lfginc/gala-api";
+import { transactionSuccess } from "@lfginc/gala-test";
 import { instanceToInstance } from "class-transformer";
 import { randomUUID } from "crypto";
 

@@ -9,7 +9,7 @@ This tutorial will guide you through the process of creating a new GalaChain cha
 GalaChain SDK provides a CLI to manage your chaincode. You can install it with:
 
 ```
-npm i -g @gala-chain/cli
+npm i -g @lfginc/gala-cli
 ```
 
 To verify it works you can use:

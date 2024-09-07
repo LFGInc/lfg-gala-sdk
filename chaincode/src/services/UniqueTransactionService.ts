@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainError, ErrorCode } from "@gala-chain/api";
+import { ChainError, ErrorCode } from "@lfginc/gala-api";
 import { Context } from "fabric-contract-api";
 
 import { GalaChainContext } from "../types";

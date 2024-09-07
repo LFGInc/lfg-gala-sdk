@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ChainObject } from "@gala-chain/api";
-import { TestChaincodeStub } from "@gala-chain/test";
+import { ChainObject } from "@lfginc/gala-api";
+import { TestChaincodeStub } from "@lfginc/gala-test";
 import { Buffer } from "buffer";
 
 import { CachedKV, FabricIterable } from "./FabricIterable";
