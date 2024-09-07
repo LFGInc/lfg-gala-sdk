@@ -3,6 +3,7 @@
  */
 import { ChainCallDTO, ConstructorArgs } from "@lfginc/gala-api";
 import { BrowserProvider, getAddress } from "ethers";
+import { stringify } from "flatted";
 
 import { CustomEventEmitter, MetaMaskEvents } from "../helpers";
 import { CustomClient } from "../types/CustomClient";
@@ -98,9 +99,7 @@ export class LfgwConnectClient extends CustomEventEmitter<MetaMaskEvents> implem
     }
   }
 
-  public async signObject<U extends ConstructorArgs<ChainCallDTO>>(
-    payload: U
-  ): Promise<{ signature: string }> {
+  public async signObject(payload: object): Promise<{ signature: string }> {
     if (!this.#provider) {
       throw new Error(LfgwConnectError.NO_PROVIDER);
     }
@@ -108,10 +107,22 @@ export class LfgwConnectClient extends CustomEventEmitter<MetaMaskEvents> implem
       throw new Error(LfgwConnectError.NO_ACCOUNT);
     }
 
+    if (typeof payload !== "object") {
+      throw new Error("Payload must be an object");
+    }
+
+    let serializedPayload = "";
+
+    try {
+      serializedPayload = JSON.stringify(payload);
+    } catch (error: unknown) {
+      throw new Error("Error serializing payload");
+    }
+
     try {
       const signature = (await this.#provider.send(LfgwConnectMethods.SIGN_OBJECT, [
         this.#address.toLowerCase(),
-        JSON.stringify(payload)
+        serializedPayload
       ])) as string;
 
       return { signature };

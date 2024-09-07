@@ -1,6 +1,6 @@
 {
   "name": "@lfginc/gala-connect",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "description": "A custom Gala SDK for LFG, forked from @lfginc/gala-connect@1.4.2",
   "repository": {
     "type": "git",
@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "@lfginc/gala-api": "^0.0.1",
-    "@lfginc/gala-connect": "^0.0.3",
     "ethers": "^6.12.1",
+    "flatted": "^3.3.1",
     "tslib": "^2.3.0"
   },
   "overrides": {
